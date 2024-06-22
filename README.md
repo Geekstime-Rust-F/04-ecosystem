@@ -10,3 +10,7 @@ anyhow这个库实现了大部分`Error`转换成`anyhow::Error`, 在main函数�
 ### anyhow 和 thiserror的对比
 在不关心error类型的时候使用anyhow, 一般用在应用程序中. 在做一些library的时候, 往往要设计特定的error类型一般使用者获取信息的时候使用thiserror.
 如果使用anyhow时发现需要用到很多的downcast的时候, 也可以考虑使用thiserror了
+
+## 日志处理
+### tracing
+记录各种各样的日志, 以及为日志提供各种各样的tag以便于其他日志系统跟它很好地交互

@@ -100,3 +100,7 @@ OpenTelemetry提供两种export数据的方式, 一种时应用程序直接expor
 在Collector内部设计中, 一套数据的流入、处理、流出的过程称为pipeline. pipeline由三个部分组成: receiver, processor, exporter. receiver用于接收数据, processor用于处理数据, exporter用于导出数据.
 
 例子中使用`docker run -d -p 16686:16686 -p 4317:4317 -e COLLECTOR_OTLP_ENABLED=true jaegertracing/all-in-one:latest`启动一个jaeger的all-in-one容器, 用作Collector. 其中4317是OTLP的端口, 16686是jaeger的web interface的端口.
+
+### 宏
+#### derive_builder
+这个宏实现了builder pattern. 通过在struct上使用`#[derive(Builder)]`, 会自动生成一个builder struct, 以及一个build方法和所有fields的setter方法. 这样就可以很方便地构建一个struct了, 对于fields很多或者构建复杂的struct, 这个宏很有用.

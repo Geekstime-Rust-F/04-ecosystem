@@ -110,3 +110,6 @@ Rust中有许多为基本类型提供的trait, 比如Add, Sub, Mul, From, Displa
 
 #### strum
 strum提供了一系列简化enums和enum与strings之间转换的宏.
+
+### serde
+serde是一个高效, 通用地序列化和反序列化Rust数据结构的库.

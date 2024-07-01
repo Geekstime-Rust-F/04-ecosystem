@@ -107,3 +107,6 @@ OpenTelemetry提供两种export数据的方式, 一种时应用程序直接expor
 
 #### derive_more
 Rust中有许多为基本类型提供的trait, 比如Add, Sub, Mul, From, Display等等. 但对于把这些基本类型包起来的自定义类型就没有实现了, 需要我们手动创建. 当我们自定义类型非常简单的时候, 这就比较annoying. 这个宏就是为了解决这个问题的, 允许我们通过derive的方式实现这些trait
+
+#### strum
+strum提供了一系列简化enums和enum与strings之间转换的宏.
